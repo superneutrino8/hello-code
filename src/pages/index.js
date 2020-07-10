@@ -8,12 +8,16 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Learn To Design and Code React Apps</h1>
-    <p>
-      Complete Course about the best tools and design systems. Prototype and
-      built apps with React and Swift.
-    </p>
-    <Link to="/page-2/">Go to page 2</Link> <br />
+    <div className="Hero">
+      <div className="HeroGroup">
+        <h1>Learn To Design and Code React Apps</h1>
+        <p>
+          Complete Course about the best tools and design systems. Prototype and
+          built apps with React and Swift.
+        </p>
+        <Link to="/page-2/">Watch The Video</Link> <br />
+      </div>
+    </div>
   </Layout>
 )
 
