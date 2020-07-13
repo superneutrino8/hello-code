@@ -28,6 +28,7 @@ a {
     margin: 0;
     font-size: 60px;
     line-height: 1.2;
+    animation: HeroAnimation 0.5s;
 }
 
 .Hero p {
@@ -45,4 +46,30 @@ a {
     padding: 9px 20px;
     border: 1px solid rgba(255, 255, 255, 1.25);
     border-radius: 20px;
+}
+
+@media (max-width: 640px) {
+    .HeroGroup {
+        padding: 100px 20px;
+    }
+
+    .Hero h1 {
+        font-size: 40px;
+    }
+
+    .Hero p {
+        font-size: 24px;
+    }
+}
+
+@keyframes HeroAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+    }
 }
