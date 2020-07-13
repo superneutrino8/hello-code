@@ -27,14 +27,17 @@ a {
     color: white;
     margin: 0;
     font-size: 60px;
+    opacity: 0;
     line-height: 1.2;
-    animation: HeroAnimation 0.5s;
+    animation: HeroAnimation 1s forwards ease;
 }
 
 .Hero p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 30px;
     line-height: 1.5;
+    opacity: 0;
+    animation: HeroAnimation 1s ease 0.15s forwards;
 }
 
 .Hero a {
@@ -46,6 +49,14 @@ a {
     padding: 9px 20px;
     border: 1px solid rgba(255, 255, 255, 1.25);
     border-radius: 20px;
+    opacity: 0;
+    animation: HeroAnimation 1s ease 0.4s forwards;
+    transition: 0.32s ease;
+}
+
+.Hero a:hover {
+    background: whitesmoke;
+    color: black;
 }
 
 @media (max-width: 640px) {
@@ -70,6 +81,6 @@ a {
 
     100% {
         opacity: 1;
-        transform:
+        transform: translateY(0px);
     }
 }
