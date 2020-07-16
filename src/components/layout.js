@@ -20,6 +20,14 @@ const Layout = ({ children }) => {
           title
         }
       }
+      allContentfulLink {
+        edges {
+          node {
+            title
+            url
+          }
+        }
+      }
     }
   `)
 
@@ -28,6 +36,9 @@ const Layout = ({ children }) => {
       <div>
         <Header></Header>
         <main>{children}</main>
+        {data.allContentfulLink.edges.map(edge => (
+          <a href={edge.node.url}>{edge.node.title}</a>
+        ))}
       </div>
     </>
   )
