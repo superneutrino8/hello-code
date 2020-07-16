@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Wave from "./Wave"
 
 const SectionGroup = styled.div`
-  background: url(${props => props.image});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props => props.image});
   height: 720px;
   background-size: cover;
   display: grid;
@@ -45,7 +45,6 @@ const SectionTitle = styled.h3`
   @media (max-width: 720px) {
     font-size: 40px;
   }
-
 `
 
 const SectionText = styled.p`
@@ -68,8 +67,12 @@ const WaveTop = styled.div`
 
 const Section = props => (
   <SectionGroup image={props.image}>
-    <WaveTop><Wave /></WaveTop>
-    <WaveBottom><Wave /></WaveBottom>
+    <WaveTop>
+      <Wave />
+    </WaveTop>
+    <WaveBottom>
+      <Wave />
+    </WaveBottom>
     <SectionLogo src={props.logo}></SectionLogo>
     <SectionTitleGroup>
       <SectionTitle>{props.title}</SectionTitle>
