@@ -34,7 +34,6 @@ const SectionCellGroup = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
     <div className="Hero">
       <div className="HeroGroup">
         <h1>
@@ -56,44 +55,44 @@ const IndexPage = () => (
         </div>
         <Wave />
       </div>
-      <div className="Cards">
-        <h2>11 Courses, more coming</h2>
-        <div className="CardGroup">
-          <Card
-            title="Design System"
-            text="10 section"
-            image={require("../images/wallpaper.jpg")}
-          />
-          <Card
-            title="React For Developer"
-            text="12 section"
-            image={require("../images/wallpaper2.jpg")}
-          />
-          <Card
-            title="Sound Design"
-            text="5 section"
-            image={require("../images/wallpaper3.jpg")}
-          />
-          <Card
-            title="ARKit 2"
-            text="10 section"
-            image={require("../images/wallpaper.jpg")}
-          />
-        </div>
-      </div>
-      <Section
-        image={require("../images/wallpaper2.jpg")}
-        logo={require("../images/logo-react.png")}
-        title="React For Designers"
-        text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
-      />
-      <SectionCaption>12 Section - 6 Hours</SectionCaption>
-      <SectionCellGroup>
-        {staticdata.cells.map(data => (
-          <Cell key={data.title} image={data.image} title={data.title} />
-        ))}
-      </SectionCellGroup>
     </div>
+    <div className="Cards">
+      <h2>11 Courses, more coming</h2>
+      <div className="CardGroup">
+        <Card
+          title="Design System"
+          text="10 section"
+          image={require("../images/wallpaper.jpg")}
+        />
+        <Card
+          title="React For Developer"
+          text="12 section"
+          image={require("../images/wallpaper2.jpg")}
+        />
+        <Card
+          title="Sound Design"
+          text="5 section"
+          image={require("../images/wallpaper3.jpg")}
+        />
+        <Card
+          title="ARKit 2"
+          text="10 section"
+          image={require("../images/wallpaper.jpg")}
+        />
+      </div>
+    </div>
+    <Section
+      image={require("../images/wallpaper2.jpg")}
+      logo={require("../images/logo-react.png")}
+      title="React For Designers"
+      text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
+    />
+    <SectionCaption>12 Section - 6 Hours</SectionCaption>
+    <SectionCellGroup>
+      {staticdata.cells.map(data => (
+        <Cell key={data.title} image={data.image} title={data.title} />
+      ))}
+    </SectionCellGroup>
   </Layout>
 )
 

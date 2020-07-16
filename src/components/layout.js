@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "../components/header"
 import "./layout.css"
+import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,15 +33,15 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <div>
-        <Header></Header>
-        <main>{children}</main>
-        {data.allContentfulLink.edges.map(edge => (
-          <a href={edge.node.url}>{edge.node.title}</a>
-        ))}
-      </div>
-    </>
+    <div>
+      <Header />
+      {children}
+      <Footer data={data}>
+        Backgrounds made in Cinema 4D, iOS app in Swift, site in React.{" "}
+        <a href="mailto:support@designcode.io">Email us</a> to ask anything. ©
+        2018
+      </Footer>
+    </div>
   )
 }
 
