@@ -21,11 +21,12 @@ const Layout = ({ children }) => {
           title
         }
       }
-      allContentfulLink {
+      allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
         edges {
           node {
             title
             url
+            createdAt
           }
         }
       }
