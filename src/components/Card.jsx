@@ -1,12 +1,12 @@
-import React, { memo } from "react"
+import React from "react"
 import "./Card.css"
 
 const Card = props => (
-    <div className="Card">
-        <img src={props.image}/>
-        <h3>{props.title}</h3>
-        <p>{props.text}</p>
-    </div>
+  <div className="Card">
+    <img src={props.image} alt="Card BG" />
+    <h3>{props.title}</h3>
+    <p>{props.text}</p>
+  </div>
 )
 
 export default Card
